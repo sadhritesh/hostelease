@@ -21,9 +21,9 @@ Database: SQL Server
 
 See detailed documentation:
 
-- docs/system-design.md
-- docs/database-design.md
-- docs/requirement-document.md
+- docs/system-design/system-design.md
+- docs/er-diagram/er-diagram.md
+- docs/reuirements/requirements.md
 
 ## ER Diagram
 
