@@ -1,0 +1,30 @@
+2026-07-04 15:03:47 [Information] HostelEase.Infrastructure.Services.AccountService User registeration started for "sadhritesh02@gmail.com"
+2026-07-04 15:03:47 [Debug] HostelEase.Infrastructure.Services.AccountService Creating identity user for "sadhritesh02@gmail.com"
+2026-07-04 15:03:48 [Information] HostelEase.Infrastructure.Services.AccountService User created successfully for 6cecd46a-98a7-471c-09ad-08ded9af599d
+2026-07-04 15:03:48 [Debug] HostelEase.Infrastructure.Services.AccountService Assigning role "Manager" to "sadhritesh02@gmail.com"
+2026-07-04 15:03:48 [Information] HostelEase.Infrastructure.Services.AccountService Role "Manager" assigned to "sadhritesh02@gmail.com"
+2026-07-04 15:03:48 [Debug] HostelEase.Infrastructure.Services.AccountService Generating email confirmation token for "sadhritesh02@gmail.com"
+2026-07-04 15:03:48 [Debug] HostelEase.Infrastructure.Services.AccountService Sending confirmation email for "sadhritesh02@gmail.com"
+2026-07-04 15:03:53 [Information] HostelEase.Infrastructure.Services.AccountService Confirmation email sent to "sadhritesh02@gmail.com"
+2026-07-04 15:03:53 [Information] HostelEase.Infrastructure.Services.AccountService User registration completed successfully for "sadhritesh02@gmail.com"
+2026-07-04 15:07:28 [Information] HostelEase.Infrastructure.Services.AccountService User registeration started for "sadhritesh.dev01@gmail.com"
+2026-07-04 15:07:29 [Information] HostelEase.Infrastructure.Services.AccountService User created successfully for a1ea4a2e-6a4d-4f07-d2ff-08ded9afdd8f
+2026-07-04 15:07:30 [Information] HostelEase.Infrastructure.Services.AccountService Role "Manager" assigned to "sadhritesh.dev01@gmail.com"
+2026-07-04 15:07:35 [Error] HostelEase.Infrastructure.Services.AccountService Failed to send confirmation email to "sadhritesh.dev01@gmail.com"
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at HostelEase.Infrastructure.Services.EmailService.SendEmailAsync(String toEmail, String subject, String body, Boolean isBodyHtml) in C:\Users\ASUS\OneDrive\Desktop\HostelEase\HostelEase\HostelEase.Infrastructure\Services\EmailService.cs:line 91
+   at HostelEase.Infrastructure.Services.EmailService.SendRegistrationConfirmationEmailAsync(String toEmail, String firstName, String confirmationLink) in C:\Users\ASUS\OneDrive\Desktop\HostelEase\HostelEase\HostelEase.Infrastructure\Services\EmailService.cs:line 47
+   at HostelEase.Infrastructure.Services.AccountService.RegisterUserAsync(RegisterUserDto dto) in C:\Users\ASUS\OneDrive\Desktop\HostelEase\HostelEase\HostelEase.Infrastructure\Services\AccountService.cs:line 216
+2026-07-04 15:07:35 [Information] HostelEase.Infrastructure.Services.AccountService User registration completed successfully for "sadhritesh.dev01@gmail.com"
+2026-07-04 15:17:32 [Information] HostelEase.Infrastructure.Services.AccountService User registeration started for "sadhritesh03@gmail.com"
+2026-07-04 15:17:33 [Information] HostelEase.Infrastructure.Services.AccountService User created successfully for c8691b32-b018-4c7f-f5f0-08ded9b14598
+2026-07-04 15:17:34 [Information] HostelEase.Infrastructure.Services.AccountService Role "Manager" assigned to "sadhritesh03@gmail.com"
+2026-07-04 15:17:40 [Information] HostelEase.Infrastructure.Services.AccountService Confirmation email sent to "sadhritesh03@gmail.com"
+2026-07-04 15:17:40 [Information] HostelEase.Infrastructure.Services.AccountService User registration completed successfully for "sadhritesh03@gmail.com"

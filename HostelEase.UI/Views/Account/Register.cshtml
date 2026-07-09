@@ -1,0 +1,73 @@
+﻿@using HostelEase.UI.ViewModels.AccountViewModels
+@model HostelEase.UI.ViewModels.AccountViewModels.RegisterViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<form asp-controller="Account" asp-action="Register" method="post">
+	<div asp-validation-summary="All" style="color:red"></div>
+	<div>
+			<label asp-for="FirstName"></label>
+			<div>
+				<input asp-for="FirstName" />
+				<span asp-validation-for="FirstName" style="color:red"></span>
+			</div>
+	</div>
+	<div>
+		<label asp-for="LastName"></label>
+		<div>
+			<input asp-for="LastName" />
+			<span asp-validation-for="LastName" style="color:red"></span>
+		</div>
+	</div>
+	<div>
+		<label asp-for="Email"></label>
+		<div>
+			<input asp-for="Email" />
+			<span asp-validation-for="Email" style="color:red"></span>
+		</div>
+	</div>
+	<div>
+		<label asp-for="DateOfBirth"></label>
+		<div>
+			<input asp-for="DateOfBirth" />
+			<span asp-validation-for="DateOfBirth" style="color:red"></span>
+		</div>
+	</div>
+	<div>
+		<label asp-for="Role"></label>
+		<div>
+			<select asp-for="Role" asp-items="Html.GetEnumSelectList<RoleType>()">
+				<option value="">-- Select Role --</option>
+			</select>
+			<span asp-validation-for="Role" style="color:red" ></span>
+		</div>
+	</div>
+
+	<div>
+		<label asp-for="PhoneNumber"></label>
+		<div>
+			<input asp-for="PhoneNumber" />
+			<span asp-validation-for="PhoneNumber" style="color:red"></span>
+		</div>
+	</div>
+	<div>
+		<label asp-for="Password"></label>
+		<div>
+			<input asp-for="Password" />
+			<span asp-validation-for="Password" style="color:red"></span>
+		</div>
+	</div>
+	<div>
+		<label asp-for="ConfirmPassword"></label>
+		<div>
+			<input asp-for="ConfirmPassword" />
+			<span asp-validation-for="ConfirmPassword" style="color:red"></span>
+		</div>
+	</div>
+
+	<input type="submit" value="Submit" />
+
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}

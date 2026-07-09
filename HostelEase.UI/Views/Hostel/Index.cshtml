@@ -1,0 +1,32 @@
+﻿@model IEnumerable<HostelEase.Domain.Entities.Hostel>
+@using System.Linq
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Hostels</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <p>No hostels found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr><th>Name</th><th>Address</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var hostel in Model)
+            {
+                <tr>
+                    <td>@hostel.Name</td>
+                    <td>@hostel.Address</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+}

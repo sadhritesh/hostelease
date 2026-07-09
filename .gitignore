@@ -3,3 +3,6 @@ bin/
 obj/
 *.user
 *.suo
+
+appsettings.production.json
+appsettings.production.*.json
